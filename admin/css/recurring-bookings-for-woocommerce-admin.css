@@ -1,0 +1,408 @@
+@charset "UTF-8";
+/*
+*
+* Styles for Recurrings Bookings for WooCommerce Plugin
+*
+*
+*/
+h3 {
+  line-height: initial;
+}
+
+.rbwc_timecontainer {
+  display: flex;
+}
+.rbwc_timecontainer .time_arrow {
+  padding: 0px 40px;
+  display: flex;
+  align-items: end;
+}
+.rbwc_timecontainer .time_arrow p {
+  font-size: xx-large;
+  margin: 0px;
+}
+
+#booking-duration-prompt, .rbwc_resource_container, .rbwc_persons_container {
+  border: 1px solid green;
+  background-color: #fefefe;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.rbwc_disable {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.rbwc_helpers label {
+  display: inline-block;
+  margin: 6px;
+}
+
+input[type=radio] {
+  margin-right: 10px;
+}
+
+img {
+  max-width: 100%;
+}
+
+#wpcontent {
+  padding-left: 0px;
+}
+#wpcontent #wpbody {
+  padding-left: 20px;
+}
+#wpcontent #wpbody .woocommerce-layout {
+  padding: 0;
+}
+
+.rbwc-upgrade-panel li {
+  margin-left: 10px;
+}
+.rbwc-upgrade-panel li:before {
+  font-family: WooCommerce;
+  color: darkgreen;
+  content: "";
+  margin-right: 10px;
+  vertical-align: top;
+}
+
+.fs-secure-notice {
+  position: relative !important;
+  width: calc(100% - 20px);
+  top: 0px !important;
+  left: -20px !important;
+}
+
+#cookies_opt_in {
+  top: 600px !important;
+}
+
+.woocommerce-page .wrap.fs-section {
+  margin-top: 40px;
+}
+
+.rbwc-admin-header {
+  display: grid;
+  grid-template-areas: "title meta";
+  grid-template-columns: auto 275px;
+  background-color: #fff;
+  border-bottom: 1px solid #dbdbdb;
+  padding: 20px 20px;
+  position: relative;
+}
+.rbwc-admin-header .rbwc-notices-trigger {
+  margin: 0px;
+  padding: 0px;
+}
+@media (max-width: 782px) {
+  .rbwc-admin-header {
+    display: block;
+  }
+}
+.rbwc-admin-header .rbwc-title {
+  grid-area: title;
+  display: flex;
+  line-height: normal;
+}
+.rbwc-admin-header .rbwc-title a {
+  text-decoration: none;
+  display: flex;
+}
+.rbwc-admin-header .rbwc-title a img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+.rbwc-admin-header .rbwc-title a h1 {
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0px;
+}
+@media (max-width: 600px) {
+  .rbwc-admin-header .rbwc-title a h1 {
+    font-size: 14px;
+  }
+}
+.rbwc-admin-header .rbwc-meta {
+  grid-area: meta;
+  align-self: center;
+  display: flex;
+  justify-content: space-between;
+}
+.rbwc-admin-header .rbwc-meta .button-primary {
+  background-color: #533A98;
+  border-color: #533A98;
+}
+.rbwc-admin-header .rbwc-meta .rbwc-version {
+  margin-left: 5px;
+  align-self: center;
+}
+@media (max-width: 782px) {
+  .rbwc-admin-header .rbwc-meta .rbwc-version {
+    margin-left: 0px;
+  }
+}
+@media (max-width: 600px) {
+  .rbwc-admin-header .rbwc-meta .rbwc-version {
+    display: none;
+  }
+}
+@media (max-width: 782px) {
+  .rbwc-admin-header .rbwc-meta {
+    display: block;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 600px) {
+  .rbwc-admin-header .rbwc-meta {
+    display: flex;
+    justify-content: space-around;
+  }
+  .rbwc-admin-header .rbwc-meta button {
+    font-size: 12px;
+  }
+}
+
+/*
+Styles for the WooCommerce product page recurring booking tab
+ */
+#woocommerce-product-data ul.wc-tabs li.rbwc_bookings_options a:before {
+  content: "";
+}
+
+/*
+Styles for admin booking forms
+ */
+.button-primary.rbwc-submit {
+  background: #533A98;
+  border-color: #533A98;
+}
+.button-primary.rbwc-submit:hover {
+  background: #3f2c73;
+  border-color: #3f2c73;
+}
+.button-primary.rbwc-submit:focus {
+  background: #3f2c73;
+  border-color: #3f2c73;
+  box-shadow: 0 0 0 1px #fff, 0 0 0 3px #3f2c73;
+}
+
+.wc-booking-form-infobox {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  column-gap: 15px;
+}
+@media (max-width: 782px) {
+  .wc-booking-form-infobox {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.wc-booking-form-infobox div ul {
+  margin: 10px;
+  padding-left: 20px;
+}
+.wc-booking-form-infobox div ul li {
+  position: relative;
+}
+.wc-booking-form-infobox div ul li:before {
+  font-family: Dashicons;
+  content: "";
+  color: darkgreen;
+  padding-right: 10px;
+  margin-left: -15px;
+  display: inline-block;
+  line-height: 1;
+  font-weight: 400;
+  font-style: normal;
+  speak: never;
+  text-decoration: inherit;
+  text-transform: none;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  vertical-align: top;
+  text-align: center;
+  transition: color 0.1s ease-in;
+  position: absolute;
+  left: -13px;
+}
+
+.form-table td .rbwc-bookable-product-id-info {
+  font-size: 12px;
+}
+
+.select2-container.select2-container--focus .select2-selection--single,
+.select2-container.select2-container--open .select2-selection--multiple,
+.select2-container.select2-container--open .select2-selection--single {
+  border-color: #007cba;
+  box-shadow: 0 0 0 1px #007cba;
+}
+
+.select2-container {
+  min-width: 400px !important;
+  vertical-align: top;
+  margin-bottom: 3px;
+}
+.select2-container .select2-dropdown {
+  border-color: #007cba;
+}
+.select2-container .select2-dropdown--below {
+  box-shadow: 0 0 0 1px #007cba, 0 2px 1px rgba(0, 0, 0, 0.1);
+}
+.select2-container .select2-dropdown--below::after {
+  top: -1px;
+}
+.select2-container .select2-dropdown::after {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #fff;
+  content: "";
+}
+.select2-container .select2-selection--single {
+  height: 30px;
+}
+.select2-container .select2-selection--single .select2-selection__arrow {
+  right: 1px;
+  height: 28px;
+  width: 23px;
+  background: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M5%206l5%205%205-5%202%201-7%207-7-7%202-1z%22%20fill%3D%22%23555%22%2F%3E%3C%2Fsvg%3E") no-repeat right 5px top 55%;
+  background-size: auto;
+  background-size: 16px 16px;
+}
+.select2-container .select2-selection--single .select2-selection__arrow b {
+  display: none;
+}
+
+.wc_booking_page_create_recurring_booking .woocommerce-layout__header {
+  display: none;
+}
+.wc_booking_page_create_recurring_booking .woocommerce-layout__activity-panel-tabs {
+  display: none;
+}
+.wc_booking_page_create_recurring_booking .woocommerce-layout__header-breadcrumbs {
+  display: none;
+}
+.wc_booking_page_create_recurring_booking .woocommerce-embed-page .woocommerce-layout__primary {
+  display: none;
+}
+.wc_booking_page_create_recurring_booking .woocommerce-embed-page #screen-meta, .wc_booking_page_create_recurring_booking .woocommerce-embed-page #screen-meta-links {
+  top: 0;
+}
+.wc_booking_page_create_recurring_booking #wpbody .woocommerce-layout {
+  padding-top: 20px !important;
+}
+.wc_booking_page_create_recurring_booking #wc-bookings-booking-form th {
+  display: none;
+}
+.wc_booking_page_create_recurring_booking #wc-bookings-booking-form td {
+  padding: 15px 0;
+}
+.wc_booking_page_create_recurring_booking .wc-bookings-booking-form .rbwc-series-header {
+  margin: 0 0 1em;
+  font-weight: bold;
+}
+.wc_booking_page_create_recurring_booking .wc-bookings-booking-form .rbwc-date-picker {
+  display: flex;
+  align-items: center;
+}
+.wc_booking_page_create_recurring_booking .wc-bookings-booking-form .rbwc-date-picker input {
+  margin: 0 10px;
+  width: 140px;
+  background: url(../assets/calendar-alt.svg) no-repeat scroll 110px center;
+  background-color: #f2f2f2;
+  padding-left: 10px;
+}
+.wc_booking_page_create_recurring_booking .wc-bookings-booking-form .radio-tabs {
+  display: flex;
+  margin: 0 0 1em;
+  overflow: hidden;
+}
+.wc_booking_page_create_recurring_booking .wc-bookings-booking-form .radio-tabs label {
+  background-color: #e4e4e4;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+  line-height: 1;
+  text-align: center;
+  padding: 8px 16px;
+  margin: 0 10px 0 0;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+  transition: all 0.1s ease-in-out;
+}
+.wc_booking_page_create_recurring_booking .wc-bookings-booking-form .radio-tabs label:hover {
+  cursor: pointer;
+}
+.wc_booking_page_create_recurring_booking .wc-bookings-booking-form .radio-tabs input {
+  position: absolute !important;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  width: 1px;
+  border: 0;
+  overflow: hidden;
+}
+.wc_booking_page_create_recurring_booking .wc-bookings-booking-form .radio-tabs input:checked + label {
+  background-color: #96588a;
+  color: #fff;
+  box-shadow: none;
+}
+.wc_booking_page_create_recurring_booking .wc-bookings-booking-form .select-before {
+  display: flex;
+  align-items: center;
+}
+.wc_booking_page_create_recurring_booking .wc-bookings-booking-form .select-before select {
+  width: 65px;
+  margin: 0 10px;
+}
+.wc_booking_page_create_recurring_booking .wc-bookings-booking-form .inline-field {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.wc_booking_page_create_recurring_booking .wc-bookings-booking-form .inline-field select, .wc_booking_page_create_recurring_booking .wc-bookings-booking-form .inline-field input {
+  margin: 0 10px;
+}
+.wc_booking_page_create_recurring_booking .wc-bookings-booking-form .rbwc-series-month-rules {
+  display: flex;
+}
+.wc_booking_page_create_recurring_booking .wc-bookings-booking-form .rbwc-series-month-rules #wc_bookings_field_recur_month_rule_0 {
+  width: 125px;
+}
+.wc_booking_page_create_recurring_booking .wc-bookings-booking-form .rbwc-series-month-rules #wc_bookings_field_recur_month_rule_1 {
+  width: 80px;
+}
+.wc_booking_page_create_recurring_booking .wc-bookings-booking-form .rbwc-series-month-rules #wc_bookings_field_recur_month_rule_2 {
+  width: 105px;
+}
+.wc_booking_page_create_recurring_booking #rbwc-bookings-panel ul {
+  margin-left: 10px;
+}
+.wc_booking_page_create_recurring_booking #rbwc-bookings-panel .rbwc-valid-date {
+  list-style: none;
+}
+.wc_booking_page_create_recurring_booking #rbwc-bookings-panel .rbwc-valid-date:before {
+  font-family: WooCommerce;
+  color: darkgreen;
+  content: "";
+  margin-right: 10px;
+  vertical-align: top;
+}
+.wc_booking_page_create_recurring_booking #rbwc-bookings-panel .rbwc-invalid-date {
+  list-style: none;
+}
+.wc_booking_page_create_recurring_booking #rbwc-bookings-panel .rbwc-invalid-date:before {
+  font-family: WooCommerce;
+  color: darkred;
+  content: "";
+  margin-right: 10px;
+  vertical-align: top;
+}
+
+/*# sourceMappingURL=recurring-bookings-for-woocommerce-admin.css.map */
